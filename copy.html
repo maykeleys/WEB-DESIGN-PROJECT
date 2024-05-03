@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="shortcut icon" href="images/barbecue.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #ffffff;
+        }
+        .container{
+            width: 85%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .container .title{
+    width: 60%;
+    margin: 0px auto 30px auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+.container .title h2{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+.container .title img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+}
+
+        .container .title p{
+            color: #333;
+            font-size: 14px;
+        }
+        .content .list{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .content .list a{
+            color: #000;
+            margin: 0px 15px;
+            transition: .3s ease-in-out;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            position: relative;
+            text-decoration: none;
+        }
+        .content .list a::after{
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            width: 0%;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d4a373;
+            transition: .4s ease-in-out;
+        }
+        .content .list a:hover::after{
+            width: 100%;
+        }
+        .content .list a:first-child{
+            color: #d4a373;
+        }
+        .box_flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 32%;
+            background: #FFD059;
+            border-radius: 70px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            animation: movement 1s ease-in-out;
+            position: relative;
+            background-color: rgb(255, 192, 203);
+            
+        }
+        .box:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box .box_img{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .box_img img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #d4a373;
+            transition: transform 0.3s ease-in-out;
+        }
+        .box_img img:hover{
+            transform: scale(1.1);
+        }
+        .box .text{
+            text-align: center;
+            width: 100%;
+        }
+        .text h3{
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        .text section{
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #777;
+        }
+        .text article{
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: auto;
+        }
+        .buttons button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d4a373;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .buttons button:hover{
+            background-color: #b1864d;
+        }
+
+        @keyframes movement{
+            0%{
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 1320px){
+            .box{
+                width: 49%;
+            }
+        }
+        @media(max-width: 991px){
+            .container .title{
+                width: 80%;
+            }
+            .box_img img {
+                width: 170px;
+                height: 170px;
+            }
+            .box .text{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="title">
+            <h2><img src="logo.jpg" alt="Circle Logo" style="width: 40px;"> Tasty Table</h2>
+            <p>
+                
+            </p>
+        </div>
+        <div class="content">
+            <div class="list">
+                <a href="mainpage.html" data-color=".All">Home</a>
+                <a href="Appetizers.html" data-color=".featured">Appetizers</a>
+                <a href="Entrees.html" data-color=".Special">Entrees</a>
+                <a href="Sides.html" data-color=".Arrivals">Sides</a>
+                <a href="Dessert.html" data-color=".Desserts">Desserts</a>
+                <a href="Beverages.html" data-color=".Beverages">Beverages</a>
+                <a href="About.html" data-color=".About">About</a>
+            </div>
+
+            <div class="box_flex">
+                <div class="box">
+                    <div class="box_img">
+                        <a href="cookies.html"><img src="cookies.jpg" alt="Food"></a>
+                    </div>
+                    <div class="text">
+                        <h3>Cookies</h3>
+                        <section>₱30.00</section>
+                        <article>Category: Desserts</article>
+                        <div class="buttons">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_img">
+                        <a href="cake.html"><img src="cake.jpg" alt="Food"></a>
+                    </div>
+                    <div class="text">
+                        <h3>Cake</h3>
+                        <section>₱70.00</section>
+                        <article>Category: Desserts</article>
+                        <div class="buttons">
+                           
+                        </div>
+                    </div>
+                </div><div class="box">
+                    <div class="box_img">
+                        <a href="cupcake.html"><img src="cupcake.jpg" alt="Food"></a>
+                    </div>
+                    <div class="text">
+                        <h3>Cupcake</h3>
+                        <section>₱50.00</section>
+                        <article>Category: Desserts</article>
+                        <div class="buttons">
+                           
+                        </div>
+                    </div>
+                </div><div class="box">
+                    <div class="box_img">
+                        <a href="ice cream.html"><img src="icecream.jpg" alt="Food"></a>
+                    </div>
+                    <div class="text">
+                        <h3>Ice Cream</h3>
+                        <section>₱120.00</section>
+                        <article>Category: Desserts</article>
+                        <div class="buttons">
+                           
+                        </div>
+                    </div>
+                </div><div class="box">
+                    <div class="box_img">
+                        <a href="pancake.html"><img src="pancake.jpg" alt="Food"></a>
+                    </div>
+                    <div class="text">
+                        <h3>Pancake</h3>
+                        <section>₱60.00</section>
+                        <article>Category: Desserts</article>
+                        <div class="buttons">
+                           
+                        </div>
+                    </div>
+                </div><div class="box">
+                    <div class="box_img">
+                        <a href="brownies.html"><img src="brownies.jpg" alt="Food"></a>
+                    </div>
+                    <div class="text">
+                        <h3>Brownies</h3>
+                        <section>₱30.00</section>
+                        <article>Category: Desserts</article>
+                        <div class="buttons">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
